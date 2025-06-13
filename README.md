@@ -1,4 +1,5 @@
-# HyperDome
+<img src="(https://raw.githubusercontent.com/gbit-is/hyperdome/refs/heads/main/misc/hyperdome_logo_export_blue.svg" alt="drawing" width="200"/>
+
 R2-D2 Dome lighting solution using off the shelf components
 
 # Features
