@@ -85,7 +85,7 @@ def set_light_color(light_number,color):
 
 async def morph_light(light_number,end_color,steps,delay):
 
-    print("Starting morph: " + str(light_number))
+    #print("Starting morph: " + str(light_number))
 
     pixels = LIGHTS[light_number]
     start_color = dome[pixels[0]]
@@ -104,7 +104,7 @@ async def morph_light(light_number,end_color,steps,delay):
         dome.show()
         await asyncio.sleep(delay)
 
-    print("morph done for: " + str(light_number))
+    #print("morph done for: " + str(light_number))
 
 
 async def scroll_matrix():
@@ -122,7 +122,7 @@ async def scroll_matrix():
     SCROLL_COUNTER = 0
     while SCROLL_COUNTER < SCROLL_LENGTH:
 
-        print(SCROLL_COUNTER)
+        #print(SCROLL_COUNTER)
 
         await asyncio.sleep(0.1)
 
