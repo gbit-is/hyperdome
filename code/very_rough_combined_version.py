@@ -40,7 +40,7 @@ DIS_HEIGHT = 8
 SCROLL_TIMES = 8
 SCROLL_LENGTH = DIS_WIDTH * SCROLL_TIMES
 MATRIX_BRIGHTNESS = 3 # INT 0 -> 15
-MATRIX_PINS = [ board.GP2, board.GP3, board.GP4 ]   # clock, MOSI, MISO
+MATRIX_PINS = [ board.GP2, board.GP3, board.GP1 ]   # clock, MOSI, CS
 
 
 
@@ -63,8 +63,8 @@ dome = neopixel.NeoPixel(pixel_pin, TOTAL_PIXELS, brightness=NEOPIXEL_BRIGHTNESS
 
 # Init max7291 lib
 
-spi = busio.SPI(clock=MATRIX_PINS[0], MOSI=MATRIX_PINS[1], MISO=MATRIX_PINS[2])
-cs = digitalio.DigitalInOut(board.GP1)
+spi = busio.SPI(clock=MATRIX_PINS[0], MOSI=MATRIX_PINS[1])
+cs = digitalio.DigitalInOut(MATRIX_PINS[2])
 
 matrix = matrices.CustomMatrix(spi, cs, DIS_WIDTH, DIS_HEIGHT)
 
